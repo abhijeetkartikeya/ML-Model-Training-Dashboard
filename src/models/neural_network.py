@@ -55,19 +55,9 @@ class NeuralNetworkModel(BaseModel):
             # Input layer
             layers.Input(shape=(input_dim,)),
             
-            # First hidden layer
+            # Single hidden layer for speed
             layers.Dense(hidden_layers[0], activation='relu'),
-            layers.BatchNormalization(),
             layers.Dropout(dropout_rates[0]),
-            
-            # Second hidden layer
-            layers.Dense(hidden_layers[1], activation='relu'),
-            layers.BatchNormalization(),
-            layers.Dropout(dropout_rates[1]),
-            
-            # Third hidden layer
-            layers.Dense(hidden_layers[2], activation='relu'),
-            layers.Dropout(dropout_rates[2]),
             
             # Output layer
             layers.Dense(1, activation='sigmoid')
@@ -133,7 +123,7 @@ class NeuralNetworkModel(BaseModel):
                 monitor='val_loss' if validation_data else 'loss',
                 patience=params['early_stopping_patience'],
                 restore_best_weights=True,
-                verbose=1
+                verbose=0  # Silent mode for Streamlit
             ),
             
             # Reduce learning rate on plateau
@@ -142,7 +132,7 @@ class NeuralNetworkModel(BaseModel):
                 factor=0.5,
                 patience=params['reduce_lr_patience'],
                 min_lr=1e-7,
-                verbose=1
+                verbose=0  # Silent mode for Streamlit
             )
         ]
         
@@ -156,7 +146,7 @@ class NeuralNetworkModel(BaseModel):
             epochs=epochs,
             batch_size=batch_size,
             callbacks=callback_list,
-            verbose=1
+            verbose=0  # Silent mode for faster training
         )
         
         self.is_trained = True

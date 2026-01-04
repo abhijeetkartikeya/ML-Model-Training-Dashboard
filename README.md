@@ -29,6 +29,55 @@ A **production-quality, resume-ready** Machine Learning system for predicting cu
 
 ---
 
+## 🚀 Quick Start - How to Run This Project
+
+Follow these simple steps to get the project up and running:
+
+### 1. Navigate to the Project Directory
+```bash
+cd "/Users/babloo/Documents/abhijeet project/ML-Model-Training-Dashboard"
+```
+
+### 2. Set Up Virtual Environment (if not already set up)
+```bash
+# Create a virtual environment
+python3 -m venv .venv
+
+# Activate the virtual environment
+source .venv/bin/activate  # On macOS/Linux
+# or
+.venv\Scripts\activate  # On Windows
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Generate Sample Dataset
+```bash
+# Standard dataset (21 features)
+python src/data/generate_sample_data.py
+
+# OR for faster neural network training (only 2 features: tenure, MonthlyCharges)
+python src/data/generate_simple_data.py
+```
+
+### 5. Run the Streamlit Dashboard
+```bash
+streamlit run streamlit_app.py
+```
+
+The dashboard will automatically open in your browser at `http://localhost:8501`
+
+> **Note**: If you're using the existing virtual environment, use:
+> ```bash
+> /Users/babloo/Documents/abhijeet\ project/.venv/bin/python src/data/generate_sample_data.py
+> /Users/babloo/Documents/abhijeet\ project/.venv/bin/streamlit run streamlit_app.py
+> ```
+
+---
+
 ## 🎯 Overview
 
 This project demonstrates a complete end-to-end machine learning workflow for solving the **customer churn prediction** problem. It showcases production-ready code with clean architecture, comprehensive documentation, and industry best practices.

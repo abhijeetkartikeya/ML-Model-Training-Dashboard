@@ -100,28 +100,36 @@ class XGBoostModel(BaseModel):
         
         else:
             # Train with good default parameters
-            self.model = XGBClassifier(
-                learning_rate=0.1,
-                max_depth=5,
-                n_estimators=200,
-                subsample=0.9,
-                colsample_bytree=0.9,
-                eval_metric='logloss',
-                use_label_encoder=False,
-                random_state=Config.RANDOM_STATE,
-                n_jobs=-1
-            )
-            
-            # Fit with early stopping if validation set provided
+            # For XGBoost 3.x, early_stopping_rounds is set in the constructor
             if eval_set is not None:
+                self.model = XGBClassifier(
+                    learning_rate=0.1,
+                    max_depth=5,
+                    n_estimators=200,
+                    subsample=0.9,
+                    colsample_bytree=0.9,
+                    eval_metric='logloss',
+                    early_stopping_rounds=10,
+                    random_state=Config.RANDOM_STATE,
+                    n_jobs=-1
+                )
                 self.model.fit(
                     X_train, y_train,
                     eval_set=eval_set,
-                    early_stopping_rounds=10,
                     verbose=False
                 )
                 logger.info(f"Training stopped at iteration: {self.model.best_iteration}")
             else:
+                self.model = XGBClassifier(
+                    learning_rate=0.1,
+                    max_depth=5,
+                    n_estimators=200,
+                    subsample=0.9,
+                    colsample_bytree=0.9,
+                    eval_metric='logloss',
+                    random_state=Config.RANDOM_STATE,
+                    n_jobs=-1
+                )
                 self.model.fit(X_train, y_train)
             
             logger.info("Model trained with default parameters")

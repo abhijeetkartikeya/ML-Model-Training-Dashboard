@@ -330,8 +330,20 @@ elif page == "🤖 Train Models":
                     for model_key, model in models_to_train:
                         st.subheader(f"Training {model.model_name}...")
                         
+                        # Add progress bar for neural network
+                        if model_key == 'neural_network':
+                            progress_bar = st.progress(0)
+                            status_text = st.empty()
+                            status_text.text("Initializing neural network...")
+                            progress_bar.progress(20)
+                        
                         with st.spinner(f"Training {model.model_name}..."):
                             try:
+                                # Update progress for neural network
+                                if model_key == 'neural_network':
+                                    status_text.text("Training neural network (this will be fast)...")
+                                    progress_bar.progress(40)
+                                
                                 # Train model
                                 model.train(
                                     st.session_state.X_train,
@@ -340,9 +352,19 @@ elif page == "🤖 Train Models":
                                     st.session_state.y_test
                                 )
                                 
+                                # Update progress for neural network
+                                if model_key == 'neural_network':
+                                    progress_bar.progress(70)
+                                    status_text.text("Making predictions...")
+                                
                                 # Make predictions
                                 y_pred = model.predict(st.session_state.X_test)
                                 y_proba = model.predict_proba(st.session_state.X_test)
+                                
+                                # Update progress for neural network
+                                if model_key == 'neural_network':
+                                    progress_bar.progress(90)
+                                    status_text.text("Calculating metrics...")
                                 
                                 # Calculate metrics
                                 metrics = calculate_all_metrics(
@@ -350,6 +372,11 @@ elif page == "🤖 Train Models":
                                     y_pred,
                                     y_proba
                                 )
+                                
+                                # Complete progress for neural network
+                                if model_key == 'neural_network':
+                                    progress_bar.progress(100)
+                                    status_text.text("✅ Training complete!")
                                 
                                 # Store results
                                 st.session_state.trained_models[model_key] = model
