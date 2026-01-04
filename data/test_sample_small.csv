@@ -1,0 +1,21 @@
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn
+C0000001,Male,0,Yes,No,12,Yes,No,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,75.50,906.00,Yes
+C0000002,Female,0,No,No,45,Yes,Yes,DSL,Yes,No,Yes,No,Yes,No,One year,No,Mailed check,56.95,2562.75,No
+C0000003,Male,1,No,No,2,Yes,No,Fiber optic,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,89.10,178.20,Yes
+C0000004,Female,0,Yes,Yes,60,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Two year,No,Bank transfer,110.35,6621.00,No
+C0000005,Male,0,No,No,8,Yes,No,DSL,Yes,No,No,Yes,No,No,Month-to-month,Yes,Electronic check,45.20,361.60,Yes
+C0000006,Female,1,Yes,No,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Two year,No,Credit card,118.75,8550.00,No
+C0000007,Male,0,Yes,Yes,24,Yes,Yes,DSL,Yes,Yes,No,Yes,No,Yes,One year,No,Bank transfer,65.85,1580.40,No
+C0000008,Female,0,No,No,3,Yes,No,Fiber optic,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,82.40,247.20,Yes
+C0000009,Male,0,Yes,No,36,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,Yes,Mailed check,95.60,3441.60,No
+C0000010,Female,1,No,No,1,Yes,No,DSL,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,35.50,35.50,Yes
+C0000011,Male,0,Yes,Yes,48,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Two year,No,Bank transfer,105.20,5049.60,No
+C0000012,Female,0,No,No,6,Yes,No,DSL,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,42.30,253.80,Yes
+C0000013,Male,0,Yes,No,18,Yes,Yes,Fiber optic,Yes,No,No,Yes,Yes,No,One year,No,Credit card,78.90,1420.20,No
+C0000014,Female,1,No,No,4,Yes,No,Fiber optic,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,88.65,354.60,Yes
+C0000015,Male,0,Yes,Yes,54,Yes,Yes,DSL,Yes,Yes,Yes,Yes,No,Yes,Two year,No,Bank transfer,68.45,3696.30,No
+C0000016,Female,0,No,No,9,Yes,No,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,Yes,Electronic check,73.25,659.25,Yes
+C0000017,Male,0,Yes,No,30,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,One year,Yes,Mailed check,92.80,2784.00,No
+C0000018,Female,1,Yes,Yes,66,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Two year,No,Credit card,115.90,7649.40,No
+C0000019,Male,0,No,No,5,Yes,No,DSL,No,No,No,Yes,No,No,Month-to-month,Yes,Electronic check,38.75,193.75,Yes
+C0000020,Female,0,Yes,No,42,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,Yes,No,One year,No,Bank transfer,98.50,4137.00,No
