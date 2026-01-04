@@ -100,13 +100,13 @@ class ModelConfig:
     
     # Neural Network
     NEURAL_NETWORK_PARAMS = {
-        'hidden_layers': [128, 64, 32],
-        'dropout_rates': [0.3, 0.2, 0.2],
-        'learning_rate': 0.001,
-        'batch_size': 32,
-        'epochs': 50,
-        'early_stopping_patience': 10,
-        'reduce_lr_patience': 5,
+        'hidden_layers': [32],  # Single layer for ultra-fast training
+        'dropout_rates': [0.2],  # Minimal dropout
+        'learning_rate': 0.01,  # Higher learning rate for faster convergence
+        'batch_size': 256,  # Large batch for speed
+        'epochs': 5,  # Very few epochs for speed
+        'early_stopping_patience': 2,  # Stop early
+        'reduce_lr_patience': 1,
         'validation_split': Config.VALIDATION_SPLIT
     }
     
