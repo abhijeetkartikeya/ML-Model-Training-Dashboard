@@ -75,8 +75,6 @@ Once data is loaded:
 3. **Select Models** to train:
    - ☑️ Logistic Regression (fast, baseline)
    - ☑️ Random Forest (good performance)
-   - ☑️ XGBoost (best accuracy)
-   - ☑️ Neural Network (deep learning)
 
 4. **Click "🚀 Train Selected Models"**
 
@@ -92,8 +90,6 @@ Once data is loaded:
 |-------|----------|---------------|
 | Logistic Regression | ~78% | ~1 second |
 | Random Forest | ~82% | ~5 seconds |
-| **XGBoost** | **~84%** | ~10 seconds |
-| Neural Network | ~83% | ~30 seconds |
 
 ### On Small Dataset (20 customers):
 - **Note**: Results will be less reliable due to small sample size

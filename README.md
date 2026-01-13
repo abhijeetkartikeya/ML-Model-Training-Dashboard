@@ -4,7 +4,6 @@ A **production-quality, resume-ready** Machine Learning system for predicting cu
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13+-FF6F00.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
@@ -26,55 +25,6 @@ A **production-quality, resume-ready** Machine Learning system for predicting cu
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Contact](#-contact)
-
----
-
-## 🚀 Quick Start - How to Run This Project
-
-Follow these simple steps to get the project up and running:
-
-### 1. Navigate to the Project Directory
-```bash
-cd "/Users/babloo/Documents/abhijeet project/ML-Model-Training-Dashboard"
-```
-
-### 2. Set Up Virtual Environment (if not already set up)
-```bash
-# Create a virtual environment
-python3 -m venv .venv
-
-# Activate the virtual environment
-source .venv/bin/activate  # On macOS/Linux
-# or
-.venv\Scripts\activate  # On Windows
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Generate Sample Dataset
-```bash
-# Standard dataset (21 features)
-python src/data/generate_sample_data.py
-
-# OR for faster neural network training (only 2 features: tenure, MonthlyCharges)
-python src/data/generate_simple_data.py
-```
-
-### 5. Run the Streamlit Dashboard
-```bash
-streamlit run streamlit_app.py
-```
-
-The dashboard will automatically open in your browser at `http://localhost:8501`
-
-> **Note**: If you're using the existing virtual environment, use:
-> ```bash
-> /Users/babloo/Documents/abhijeet\ project/.venv/bin/python src/data/generate_sample_data.py
-> /Users/babloo/Documents/abhijeet\ project/.venv/bin/streamlit run streamlit_app.py
-> ```
 
 ---
 
@@ -114,11 +64,10 @@ This project demonstrates a complete end-to-end machine learning workflow for so
 - ✅ **No Hard-Coded Paths**: Dynamic path resolution
 
 ### 🤖 ML Features
-- ✅ **Multiple Algorithms**: Logistic Regression, Random Forest, XGBoost, Neural Network
-- ✅ **Hyperparameter Tuning**: GridSearchCV and RandomizedSearchCV
+- ✅ **Multiple Algorithms**: Logistic Regression, Random Forest
 - ✅ **Feature Engineering**: Domain-specific feature creation
-- ✅ **Data Preprocessing**: Imputation, encoding, scaling, class balancing
-- ✅ **Model Evaluation**: Comprehensive metrics and visualizations
+- ✅ **Data Preprocessing**: Imputation, encoding, scaling
+- ✅ **Model Evaluation**: Accuracy and ROC-AUC metrics
 - ✅ **Model Persistence**: Save and load trained models
 
 ### 📊 Dashboard Features
@@ -154,9 +103,7 @@ project2/
 │   │   ├── __init__.py
 │   │   ├── base_model.py         # Abstract base class
 │   │   ├── logistic_model.py     # Logistic Regression
-│   │   ├── random_forest_model.py # Random Forest
-│   │   ├── xgboost_model.py      # XGBoost
-│   │   └── neural_network.py     # Keras Neural Network
+│   │   └── random_forest_model.py # Random Forest
 │   ├── evaluation/
 │   │   ├── __init__.py
 │   │   ├── metrics.py            # Evaluation metrics
@@ -292,31 +239,16 @@ print(f"ROC-AUC: {metrics['roc_auc']:.4f}")
 - **Pros**: Feature importance, robust to overfitting
 - **Cons**: Slower than linear models
 
-### 3. XGBoost
-- **Type**: Gradient boosting
-- **Use Case**: State-of-the-art performance
-- **Pros**: High accuracy, handles missing values
-- **Cons**: Requires tuning, longer training time
-
-### 4. Neural Network
-- **Type**: Deep learning
-- **Use Case**: Complex pattern recognition
-- **Architecture**: 128 → 64 → 32 neurons with dropout
-- **Pros**: Learns complex patterns
-- **Cons**: Requires more data, less interpretable
-
 ---
 
 ## 📊 Model Performance
 
 Performance on sample telecom churn dataset (7,043 customers):
 
-| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC | Training Time |
-|-------|----------|-----------|--------|----------|---------|---------------|
-| Logistic Regression | ~78% | ~75% | ~70% | ~72% | ~0.82 | ~1s |
-| Random Forest | ~82% | ~80% | ~75% | ~77% | ~0.87 | ~5s |
-| **XGBoost** | **~84%** | **~82%** | **~78%** | **~80%** | **~0.89** | ~10s |
-| Neural Network | ~83% | ~81% | ~77% | ~79% | ~0.88 | ~30s |
+| Model | Accuracy | ROC-AUC | Training Time |
+|-------|----------|---------|---------------|
+| Logistic Regression | ~78% | ~0.82 | ~1s |
+| Random Forest | ~82% | ~0.87 | ~5s |
 
 **Note**: Performance may vary based on data and hyperparameters.
 
@@ -337,14 +269,13 @@ Performance on sample telecom churn dataset (7,043 customers):
 - **Interaction Features**: Tenure × charges, senior × charges
 
 ### Model Evaluation Metrics
-- Accuracy, Precision, Recall, F1-Score
+- Accuracy
 - ROC-AUC Score
 - Confusion Matrix
-- Classification Report
 - Feature Importance
 
 ### Technologies Used
-- **ML/Data**: pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras
+- **ML/Data**: pandas, NumPy, scikit-learn
 - **Visualization**: Matplotlib, Seaborn, Plotly
 - **Dashboard**: Streamlit
 - **Utilities**: joblib, PyYAML, python-dotenv
@@ -402,9 +333,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - **scikit-learn** for machine learning algorithms
-- **TensorFlow/Keras** for deep learning framework
 - **Streamlit** for the amazing dashboard framework
-- **XGBoost** for gradient boosting implementation
 - IBM Telco Customer Churn dataset for inspiration
 
 ---

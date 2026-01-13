@@ -19,7 +19,7 @@ source venv/bin/activate
 pip install --upgrade pip
 
 # Install dependencies
-pip install pandas numpy scikit-learn xgboost tensorflow matplotlib seaborn plotly streamlit imbalanced-learn joblib pyyaml python-dotenv
+pip install pandas numpy scikit-learn matplotlib seaborn plotly streamlit imbalanced-learn joblib pyyaml python-dotenv
 
 # Generate sample dataset
 python src/data/generate_sample_data.py
@@ -37,7 +37,7 @@ conda activate churn-prediction
 
 # Install dependencies
 conda install pandas numpy scikit-learn matplotlib seaborn
-pip install xgboost tensorflow streamlit plotly imbalanced-learn joblib pyyaml python-dotenv
+pip install streamlit plotly imbalanced-learn joblib pyyaml python-dotenv
 
 # Generate sample dataset
 python src/data/generate_sample_data.py
@@ -108,7 +108,7 @@ Many scientific packages don't yet have wheels for Python 3.15. Use Python 3.11 
 
 ```python
 # Test imports
-python -c "import pandas, numpy, sklearn, tensorflow, streamlit; print('All packages installed successfully!')"
+python -c "import pandas, numpy, sklearn, streamlit; print('All packages installed successfully!')"
 ```
 
 ## Running the Application

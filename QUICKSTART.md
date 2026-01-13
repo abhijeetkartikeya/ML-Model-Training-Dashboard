@@ -7,7 +7,7 @@ The **Customer Churn Prediction System** has been successfully built with all so
 - ✅ **Data Pipeline**: Loading, validation, preprocessing
 - ✅ **Sample Dataset**: 7,043 customer records generated
 - ✅ **Feature Engineering**: Domain-specific features
-- ✅ **4 ML Models**: Logistic, Random Forest, XGBoost, Neural Network
+- ✅ **2 ML Models**: Logistic Regression, Random Forest
 - ✅ **Evaluation System**: Metrics and visualizations
 - ✅ **Streamlit Dashboard**: Interactive web application
 - ✅ **Documentation**: README, installation guide, code docs
@@ -43,7 +43,7 @@ source venv_py311/bin/activate
 
 # Install dependencies
 pip install --upgrade pip
-pip install pandas numpy scikit-learn xgboost tensorflow matplotlib seaborn plotly streamlit imbalanced-learn joblib pyyaml python-dotenv
+pip install pandas numpy scikit-learn matplotlib seaborn plotly streamlit imbalanced-learn joblib pyyaml python-dotenv
 
 # Run the dashboard
 streamlit run streamlit_app.py
@@ -58,7 +58,7 @@ conda activate churn
 
 # Install packages
 conda install pandas numpy scikit-learn matplotlib seaborn
-pip install xgboost tensorflow streamlit plotly imbalanced-learn
+pip install streamlit plotly imbalanced-learn
 
 # Run the dashboard
 streamlit run streamlit_app.py
@@ -81,7 +81,7 @@ python demo_simple.py
 **Code Written:**
 - 3,500+ lines of production Python code
 - 20+ modules with clean architecture
-- 4 complete ML model implementations
+- 2 complete ML model implementations
 - Full data preprocessing pipeline
 - Comprehensive evaluation system
 - Interactive Streamlit dashboard
