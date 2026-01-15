@@ -67,7 +67,7 @@ This project demonstrates a complete end-to-end machine learning workflow for so
 - ✅ **Multiple Algorithms**: Logistic Regression, Random Forest
 - ✅ **Feature Engineering**: Domain-specific feature creation
 - ✅ **Data Preprocessing**: Imputation, encoding, scaling
-- ✅ **Model Evaluation**: Accuracy and ROC-AUC metrics
+- ✅ **Model Evaluation**: Accuracy and Confusion matrix 
 - ✅ **Model Persistence**: Save and load trained models
 
 ### 📊 Dashboard Features
@@ -245,10 +245,10 @@ print(f"ROC-AUC: {metrics['roc_auc']:.4f}")
 
 Performance on sample telecom churn dataset (7,043 customers):
 
-| Model | Accuracy | ROC-AUC | Training Time |
-|-------|----------|---------|---------------|
-| Logistic Regression | ~78% | ~0.82 | ~1s |
-| Random Forest | ~82% | ~0.87 | ~5s |
+| Model | Accuracy |   Training Time |
+|-------|----------|---------|-----------|
+| Logistic Regression | ~78% |  ~1s |
+| Random Forest | ~82%  | ~5s |
 
 **Note**: Performance may vary based on data and hyperparameters.
 
@@ -270,7 +270,6 @@ Performance on sample telecom churn dataset (7,043 customers):
 
 ### Model Evaluation Metrics
 - Accuracy
-- ROC-AUC Score
 - Confusion Matrix
 - Feature Importance
 
