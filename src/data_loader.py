@@ -23,7 +23,7 @@ def load_sample_data():
     
     # Load CSV
     df = pd.read_csv(data_path)
-    print(f"✅ Loaded {len(df)} customers with {len(df.columns)} features")
+    print(f" Loaded {len(df)} customers with {len(df.columns)} features")
     
     return df
 
@@ -39,6 +39,6 @@ def load_custom_data(filepath):
         DataFrame with customer data
     """
     df = pd.read_csv(filepath)
-    print(f"✅ Loaded {len(df)} customers from {filepath}")
+    print(f" Loaded {len(df)} customers from {filepath}")
     
     return df
